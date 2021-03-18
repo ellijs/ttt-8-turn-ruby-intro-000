@@ -9,19 +9,15 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-  def input_to_index(input)
-    input = input.to_i
-    input - 1
-    if input >= 0 && input <= 8)
+  index = input_to_index(input)
+  if valid_move?(board, index) >= 0 && valid_move?(board, index) <= 8
       return true
-      break
     else
-      until input >= 0 && input <= 8
-        puts "The Numer you entered is invalid"
-        def turn(board)
-        end
+      until valid_move?(board, index) >= 0 && valid_move?(board, index) <= 8
+        puts "Please enter 1-9:"
+        input = gets.strip
+        index = input_to_index(input)
       end
-    end
   end
 end
 

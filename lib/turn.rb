@@ -14,9 +14,6 @@ def turn(board)
   index = input_to_index(input)
   if (valid_move?(board, index) == true)
       return true
-      def move(board, index, position = "X")
-        board[index] = position
-      end
     else
       until (valid_move?(board, index) == true)
         puts "Please enter 1-9:"
@@ -24,6 +21,8 @@ def turn(board)
         index = input_to_index(input)
       end
    end
+   index = move(board, index, position = "X")
+   display_board(board)
 end
 
 

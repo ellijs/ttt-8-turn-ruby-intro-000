@@ -12,7 +12,7 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
-  if valid_move?(board, index) >= 0 && valid_move?(board, index) <= 8
+  if (valid_move?(board, index) >= 0 && valid_move?(board, index) <= 8)
       return true
     else
       until valid_move?(board, index) >= 0 && valid_move?(board, index) <= 8

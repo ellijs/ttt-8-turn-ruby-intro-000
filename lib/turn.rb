@@ -21,7 +21,7 @@ def turn(board)
         index = input_to_index(input)
       end
    end
-   index = move(board, index, position = "X")
+   board = move(board, index, position = "X")
    display_board(board)
 end
 
